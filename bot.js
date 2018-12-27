@@ -89,7 +89,7 @@ client.on('guildMemberAdd', member => {
     const ei = invites[member.guild.id];
     const invite = guildInvites.find(i => ei.get(i.code).uses < i.uses);
     const inviter = client.users.get(invite.inviter.id);
-    const stewart = member.guild.channels.find("name", "↗wèlcòmèヅ");
+    const stewart = member.guild.channels.find("name", "welcome");
      stewart.send(`<@${member.user.id}> تمت الدعوه من <@${inviter.id}>`);
    //  stewart.send(`<@${member.user.id}> joined using invite code ${invite.code} from <@${inviter.id}>. Invite was used ${invite.uses} times since its creation.`);
   }); 
@@ -100,7 +100,7 @@ client.on('guildMemberAdd', member => {
     const ei = invites[member.guild.id];
     const invite = guildInvites.find(i => ei.get(i.code).uses < i.uses);
     const inviter = client.users.get(invite.inviter.id);
-    const stewart = member.guild.channels.find("name", "shop»welcome‹‹");
+    const stewart = member.guild.channels.find("name", "welcome");
      stewart.send(`<@${member.user.id}> تمت الدعوه من <@${inviter.id}>`);
    //  stewart.send(`<@${member.user.id}> joined using invite code ${invite.code} from <@${inviter.id}>. Invite was used ${invite.uses} times since its creation.`);
   }); 
@@ -182,19 +182,19 @@ if(!message.channel.guild) return message.reply(' Error : \` Guild Command \`');
         }
       possibleInvites.push(['\n\ ' +'<@'+ i.inviter.id +'>' + '  :  ' +   i.uses]);
       if (i.uses === 30) {//يمديك تعدل رقم وصول العدد حق الانفايت الى اأقل أو أكثر
-          message.member.addRole(message.member.guild.roles.find("name","??Special?‏‏?  ?"))//هنآ أسم ألرتبه اللي تجيهه
+          message.member.addRole(message.member.guild.roles.find("name","Staff"))//هنآ أسم ألرتبه اللي تجيهه
 .catch(RebeL =>{
 console.log('`Error`: ' + RebeL);
 });
 }
 if (i.uses === 30) {
-message.member.addRole(message.member.guild.roles.find("name","??Special?‏‏?  ?"))
+message.member.addRole(message.member.guild.roles.find("name","Moderator"))
 .catch(RebeL =>{
 console.log('`Error`: ' + RebeL);
 });
 }
 if (i.uses === 30) {
-message.member.addRole(message.member.guild.roles.find("name","??Special?‏‏?  ?"))
+message.member.addRole(message.member.guild.roles.find("name","Owner"))
 .catch(RebeL =>{
 console.log('`Error`: ' + RebeL);
 });
@@ -253,7 +253,7 @@ var prefix = ".....!";//البرفكس
 let args = msg.content.split(" ").slice(2);
 let men = msg.mentions.users.first();
 var all = msg.content.split(" ").slice(1) - msg.mentions.users.first();
-if(msg.content.startsWith(prefix + "say-embed")) {
+if(msg.content.startsWith(prefix + "say")) {
 msg.channel.send(`تم الارساله الى ${men}`)
 let embed = new Discord.RichEmbed()
 .setTitle("Message!!!!")
@@ -267,7 +267,7 @@ men.sendMessage(embed);
 
 
 //////////////////
-const yourID = "411137717884289024"; //Instructions on how to get this: https://redd.it/40zgse
+const yourID = "412223538292981763"; //Instructions on how to get this: https://redd.it/40zgse
 const setupCMD = "g!createrolemessage"
 let initialMessage = `**React to the messages below to receive the associated role. If you would like to remove the role, simply remove your reaction!**`;
 const roles = ["Member", "disco", "Public Relations", "Intern"];
@@ -722,7 +722,7 @@ channel.send(':eggplant: :trackball: :clock: :bike: :tangerine:');
 
 
 client.on("ready", () => {
-let channel =     client.channels.get("502827267232366594")
+let channel =     client.channels.get("516973131458412595")
 setInterval(function() {
 channel.send(' https://cdn.pg.sa/ZzCBpPDFgM.png');
 }, 25)
@@ -730,7 +730,7 @@ channel.send(' https://cdn.pg.sa/ZzCBpPDFgM.png');
 
 
 client.on("ready", () => {
-let channel =     client.channels.get("502827267232366594")
+let channel =     client.channels.get("516973131458412595")
 setInterval(function() {
 channel.send(' https://cdn.dribbble.com/users/196525/screenshots/2755421/levelup-dribbble.gif ');
 }, 25)
